@@ -1,0 +1,19 @@
+stack_id: generic
+stack_name: Generic / Tech-Agnostic
+
+linter_config:
+  - "(User Defined)"
+
+coding_standards:
+  - "Follow universal standards in AGENTS.md Section 8.1"
+  - "Language-specific best practices should be adopted by the agent"
+
+testing_framework: "(User Defined)"
+
+build_tool: "(User Defined)"
+dependency_management: "(User Defined)"
+
+security_tools:
+  sast: "(General purpose tools like Semgrep, SonarQube)"
+  dast: "OWASP ZAP, Burp Suite"
+  sca: "Snyk, Dependabot"

@@ -1,0 +1,102 @@
+gates:
+  - id: architecture-review
+    name: Architecture Review
+    description: "Validate system design, component interactions, and adherence to design principles."
+    applies_to: [discovery, architecture, core-development, feature-development, integration, security-hardening, performance, uat, staging, release]
+    blocking: true
+    artifact: architecture-review.md
+
+  - id: code-review
+    name: Code Review
+    description: "Review code for quality, standards, security, and correctness."
+    applies_to: [core-development, feature-development, integration, security-hardening, performance, uat, staging, release]
+    blocking: true
+    artifact: code-review.md
+
+  - id: unit-tests
+    name: Unit Tests
+    description: "Ensure minimum 80% line coverage for all new and modified code."
+    applies_to: [core-development, feature-development, integration, security-hardening, performance, uat, staging, release]
+    blocking: true
+    min_coverage: 80
+    artifact: test-results/unit-test-report.md
+
+  - id: integration-tests
+    name: Integration Tests
+    description: "Verify correct interaction between components and services."
+    applies_to: [integration, security-hardening, performance, uat, staging, release]
+    blocking: true
+    artifact: test-results/integration-test-report.md
+
+  - id: e2e-tests
+    name: E2E Tests
+    description: "Validate end-to-end user flows in a realistic environment."
+    applies_to: [uat, staging, release]
+    blocking: true
+    artifact: test-results/e2e-test-report.md
+
+  - id: sast
+    name: SAST Scan
+    description: "Static analysis of source code for security vulnerabilities."
+    applies_to: [core-development, feature-development, integration, security-hardening, performance, uat, staging, release]
+    blocking: true
+    max_severity_allowed: MEDIUM
+    artifact: scan-results/sast-report.md
+
+  - id: dast
+    name: DAST Scan
+    description: "Dynamic testing of the running application for vulnerabilities."
+    applies_to: [integration, security-hardening, uat, staging, release]
+    blocking: true
+    max_severity_allowed: MEDIUM
+    artifact: scan-results/dast-report.md
+
+  - id: sca
+    name: SCA Scan
+    description: "Scan third-party dependencies for known CVEs."
+    applies_to: [core-development, feature-development, integration, security-hardening, performance, uat, staging, release]
+    blocking: true
+    max_severity_allowed: MEDIUM
+    artifact: scan-results/sca-report.md
+
+  - id: spa-security
+    name: SPA Security Review
+    description: "Review CSP, XSS, CORS, and client-side storage security for SPAs."
+    applies_to: [core-development, feature-development, integration, security-hardening, uat, staging, release]
+    blocking: true
+    artifact: scan-results/spa-security-report.md
+
+  - id: secrets-scan
+    name: Secrets Scanning
+    description: "Detect hardcoded API keys, passwords, and tokens in source code."
+    applies_to: [core-development, feature-development, integration, security-hardening, performance, uat, staging, release]
+    blocking: true
+    artifact: scan-results/secrets-scan-report.md
+
+  - id: license-compliance
+    name: License Compliance
+    description: "Verify all dependencies have compatible open-source licenses."
+    applies_to: [core-development, feature-development, integration, security-hardening, staging, release]
+    blocking: false
+    artifact: scan-results/license-compliance-report.md
+
+  - id: accessibility
+    name: Accessibility (a11y)
+    description: "Ensure WCAG 2.1 AA compliance for all UI components."
+    applies_to: [core-development, feature-development, uat, staging, release]
+    blocking: true
+    artifact: scan-results/accessibility-report.md
+
+  - id: iac-scan
+    name: IaC Scanning
+    description: "Detect misconfigurations in Terraform, CloudFormation, or Dockerfiles."
+    applies_to: [architecture, staging, release]
+    blocking: true
+    artifact: scan-results/iac-scan-report.md
+
+  - id: performance-testing
+    name: Performance Testing
+    description: "Establish and validate performance baselines under load."
+    applies_to: [performance, staging, release]
+    blocking: true
+    artifact: test-results/performance-test-report.md

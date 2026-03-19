@@ -1,0 +1,22 @@
+stack_id: flutter
+stack_name: Flutter (Mobile)
+
+linter_config:
+  - "analysis_options.yaml (with effective_dart)"
+
+coding_standards:
+  - "Language: Dart"
+  - "Framework: Flutter"
+  - "State Management: Provider, Riverpod, or BLoC"
+  - "File Naming: snake_case (e.g., my_widget.dart)"
+  - "Widget Structure: Break down large widgets into smaller, reusable ones"
+
+testing_framework: "flutter_test (for widget and unit tests), integration_test"
+
+build_tool: "flutter build"
+dependency_management: "pub (pubspec.yaml)"
+
+security_tools:
+  sast: "SonarDart, custom lint rules"
+  dast: "(Manual testing, platform-specific tools)"
+  sca: "(Manual review of pubspec.lock, Snyk)"

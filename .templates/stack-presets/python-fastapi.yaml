@@ -1,0 +1,25 @@
+stack_id: python-fastapi
+stack_name: Python + FastAPI
+
+linter_config:
+  - flake8
+  - black
+  - isort
+
+coding_standards:
+  - "Python Version: 3.9+"
+  - "Framework: FastAPI"
+  - "Type Hinting: Mandatory for all functions"
+  - "Async: Use `async` and `await` for all I/O bound operations"
+  - "Dependency Injection: Use FastAPI's Depends system"
+  - "Models: Pydantic for data validation and serialization"
+
+testing_framework: "pytest"
+
+build_tool: "Not applicable (interpreted language)"
+dependency_management: "pip with requirements.txt or Poetry"
+
+security_tools:
+  sast: "Bandit, SonarPython"
+  dast: "OWASP ZAP, Burp Suite"
+  sca: "pip-audit, Snyk"

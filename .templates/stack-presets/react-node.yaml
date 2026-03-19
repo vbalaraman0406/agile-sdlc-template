@@ -1,0 +1,30 @@
+stack_id: react-node
+stack_name: React + Node.js (Vite, Express)
+
+linter_config: 
+  - eslint
+  - prettier
+
+coding_standards:
+  frontend:
+    - "Framework: React (Hooks, Functional Components)"
+    - "Styling: TailwindCSS utility-first"
+    - "State Management: React Context or Redux Toolkit"
+    - "Component Naming: PascalCase (e.g., MyComponent.jsx)"
+  backend:
+    - "Framework: Express.js"
+    - "API Style: RESTful"
+    - "Async: async/await with try-catch blocks"
+    - "Middleware: Organized by function (auth, logging, validation)"
+
+testing_framework:
+  frontend: "jest + @testing-library/react"
+  backend: "jest or mocha/chai"
+
+build_tool: "Vite (frontend), tsc or babel (backend)"
+dependency_management: "npm or yarn"
+
+security_tools:
+  sast: "ESLint Security Plugin, SonarJS"
+  dast: "OWASP ZAP, Burp Suite"
+  sca: "npm audit, Snyk"
